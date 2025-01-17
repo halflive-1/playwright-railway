@@ -11,6 +11,7 @@ async function main() {
   })
   const page = await browser.newPage()
   await page.goto('https://fmiras.com')
+  console.log(page)
   await page.screenshot({ path: 'fmiras.png' })
   await browser.close()
 }
