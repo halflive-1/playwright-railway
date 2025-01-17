@@ -9,10 +9,13 @@ async function main() {
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
     ignoreDefaultArgs: ['--disable-extensions']
   })
+  console.log('1')
   const page = await browser.newPage()
+  console.log('2')
   await page.goto('https://fmiras.com')
+  console.log(123)
   console.log(page)
-  await page.screenshot({ path: 'fmiras.png' })
+  // await page.screenshot({ path: 'fmiras.png' })
   await browser.close()
 }
 
