@@ -10,6 +10,8 @@ async function main() {
     ignoreDefaultArgs: ['--disable-extensions']
   })
   console.log('1')
+  
+  process.stdout.write("hello: ");
   const page = await browser.newPage()
   console.log('2')
   await page.goto('https://fmiras.com')
@@ -26,5 +28,6 @@ app.get('/', (_req, res) => {
 })
 
 app.listen(port, () => {
+  process.stdout.write("hello:123 ");
   console.log(`ssServer is running on port ${port}`)
 })
